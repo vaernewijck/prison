@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 1.5rem;
+
+  --font-size-small: 0.8rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.5rem;
+  --font-size-xlarge: 2rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  color: #333;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: var(--spacing-large);
+}
+
+header {
+  border-bottom: 2px solid #333;
+  margin-bottom: var(--spacing-large);
+  padding-bottom: var(--spacing-medium);
+}
+
+h1 {
+  font-size: var(--font-size-xlarge);
+  margin-bottom: var(--spacing-small);
+}
+
+h2 {
+  font-size: var(--font-size-large);
+  margin: var(--spacing-medium) 0 var(--spacing-small);
+}
+
+h3 {
+  margin: var(--spacing-small) 0 var(--spacing-medium);
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 40rem) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+}
+
+section {
+  margin: 0 auto 40px auto;
+  width: 100%;
+}
+
+code, pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: var(--spacing-small);
+  overflow-x: scroll;
+}
+
+code {
+  display: block;
+  margin: var(--spacing-medium) 0;
+  width: 100%;
+}
+
+pre {
+  padding: var(--spacing-medium);
+  line-height: 1.4;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: var(--spacing-medium);
+}
+
+li {
+  margin-bottom: var(--spacing-small);
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  margin: var(--spacing-large) auto 0 auto;
+  padding-top: var(--spacing-medium);
+  text-align: center;
+  font-size: var(--font-size-small);
+  color: #666;
+}

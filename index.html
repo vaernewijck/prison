@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prison API</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Prison API</h1>
+  </header>
+  <main>
+    <div class="wrapper">
+      <section class="api-docs">
+        <h2>Available Endpoints</h2>
+        <ul id="endpoints">
+          <li><a href="./api/simple.json">/simple.json</a> - Only episode titles</li>
+          <li><a href="./api/advanced.json">/advanced.json</a> - All episode info</li>
+        </ul>
+      </section>
+    </div>
+    <section class="usage">
+      <h2>How to Use</h2>
+      <p>Access any endpoint directly via URL:</p>
+      <code id="sampleUrl">https://vaernewijck.github.io/prison/api/movies.json</code>
+      <div class="code-sample">
+        <h3>Example: Fetch movies with JavaScript</h3>
+        <pre id="codeSample">
+
+const BASE_URL = 'https://vaernewijck.github.io/prison/api';
+          
+const fetchData = async () => {
+  try {
+    const response = await fetch(`${BASE_URL}/advanced.json`);
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
+fetchData();
+                </pre>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
