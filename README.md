@@ -1,14 +1,11 @@
-![json](assets/json-jason.png)
+# Prison API
 
-# JSON Statham API
-
-A simple static JSON API providing information about actor Jason Statham.
+A simple static JSON API providing information about prison break.
 
 ## Available Endpoints
 
-- `/api/info.json` - Basic biographical information
-- `/api/movies.json` - List of movies starring Jason Statham
-- `/api/awards.json` - Awards and nominations
+- `/api/simple.json` - Only episode titles
+- `/api/advanced.json` - List of movies starring Jason Statham
 
 ## How to Use
 
@@ -18,7 +15,7 @@ Simply access any endpoint directly via URL.
 
 Example:
 ```
-GET https://vaernewijck.github.io/json-statham/api/movies.json
+GET https://vaernewijck.github.io/prison/api/simple.json
 ```
 
 ### Sample JavaScript Code
@@ -26,7 +23,7 @@ GET https://vaernewijck.github.io/json-statham/api/movies.json
 ```javascript
 const fetchData = async () => {
   try {
-    const response = await fetch('https://vaernewijck.github.io/json-statham/api/movies.json');
+    const response = await fetch('https://vaernewijck.github.io/prison/api/simple.json');
     const data = await response.json();
     console.log(data);
   } catch (error) {
