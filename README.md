@@ -15,7 +15,7 @@ Simply access any endpoint directly via URL.
 
 Example:
 ```
-GET https://vaernewijck.github.io/prison/api/simple.json
+GET https://vaernewijck.github.io/prison/api/advanced.json
 ```
 
 ### Sample JavaScript Code
@@ -23,7 +23,7 @@ GET https://vaernewijck.github.io/prison/api/simple.json
 ```javascript
 const fetchData = async () => {
   try {
-    const response = await fetch('https://vaernewijck.github.io/prison/api/simple.json');
+    const response = await fetch('https://vaernewijck.github.io/prison/api/advanced.json');
     const data = await response.json();
     console.log(data);
   } catch (error) {
